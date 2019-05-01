@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tw</Title>
+			<Shortcut>tw</Shortcut>
+			<Description>Code snippet for Trace.WriteLine</Description>
+			<Author>Luvin Mac Daddy</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal Editable="true">
+					<ID>MethodName</ID>
+					<ToolTip>Name of the current method you are in</ToolTip>
+					<Default>ThisMethodName</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[Trace.WriteLine($$"**** {this.GetType().Name}.{nameof($MethodName$)}");$end$]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
