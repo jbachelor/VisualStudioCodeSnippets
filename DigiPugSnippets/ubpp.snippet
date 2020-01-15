@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Bindable Property</Title>
+			<Shortcut>bppu</Shortcut>
+			<Description>Code snippet for bindable property - upside down</Description>
+			<Author>DigiPug</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>PropertyName</ID>
+					<ToolTip>Name of bindable property</ToolTip>
+					<Default>PropertyName</Default>
+				</Literal>
+                <Literal>
+					<ID>ReturnType</ID>
+					<ToolTip>Property return type (data type you would bind to in a ViewModel)</ToolTip>
+					<Default>string</Default>
+				</Literal>
+                <Literal>
+					<ID>DeclaringType</ID>
+					<ToolTip>Class where bindable property is declared (usually this current class)</ToolTip>
+					<Default>DeclaringType</Default>
+				</Literal>
+                <Literal>
+					<ID>DefaultPropertyValue</ID>
+					<ToolTip>Name of bindable property</ToolTip>
+					<Default>null</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[public $ReturnType$ $PropertyName$
+            {
+                get { return ($ReturnType$)GetValue($PropertyName$Property); }
+                set { SetValue($PropertyName$Property, value); }
+            }
+			public static readonly BindableProperty $PropertyName$Property = 
+                BindableProperty.Create(nameof($PropertyName$), typeof($ReturnType$), typeof($DeclaringType$), $DefaultPropertyValue$);]]>  
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets> 
