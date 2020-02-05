@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Prism Property</Title>
+			<Shortcut>propp</Shortcut>
+			<Description>Code snippet for a full prism property with backing field</Description>
+			<Author>DigiPug</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>PropertyDataType</ID>
+					<ToolTip>Data type of property</ToolTip>
+					<Default>PropertyDataType</Default>
+				</Literal>
+                <Literal>
+					<ID>PropertyName</ID>
+					<ToolTip>Name of public property</ToolTip>
+					<Default>PropertyName</Default>
+				</Literal>
+                <Literal>
+					<ID>fieldName</ID>
+					<ToolTip>Name of backing field</ToolTip>
+					<Default>fieldName</Default>
+				</Literal>                
+			</Declarations>
+			<Code Language="csharp"><![CDATA[private $PropertyDataType$ _$fieldName$;
+            public $PropertyDataType$ $PropertyName$
+            {
+                get => _$fieldName$;
+                set => SetProperty(ref _$fieldName$, value, nameof($PropertyName$));
+            }
+            $end$]]>  
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets> 
