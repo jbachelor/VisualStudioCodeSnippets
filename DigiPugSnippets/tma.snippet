@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>NUnit Async AAA</Title>
+      <Shortcut>tma</Shortcut>
+      <Description>Code snippet for an async nunit test method with AAA</Description>
+      <Author>DigiPug</Author>
+    </Header>
+    <Snippet>      
+      <Declarations>
+        <Literal>
+          <ID>TestName</ID>
+          <ToolTip>Name of the test</ToolTip>
+          <Default>MyMethodUnderTest</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="csharp"><![CDATA[[Test]
+      public async Task $TestName$()
+      {
+            /* Arrange:
+            * $end$
+            */ 
+
+            /* Act:
+            * 
+            */ 
+
+            /* Assert:
+            * 
+            */
+        }]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
